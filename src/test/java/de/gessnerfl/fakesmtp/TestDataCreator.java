@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp;
+import lombok.var;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.mail.SimpleMailMessage;

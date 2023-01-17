@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.service;
+import lombok.var;
 
 import de.gessnerfl.fakesmtp.model.ContentType;
 import de.gessnerfl.fakesmtp.model.Email;
@@ -16,6 +17,8 @@ import java.util.regex.MatchResult;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.regex.Matcher;
+import java.util.function.Function;
 
 @Service
 public class HtmlContentRenderer {
@@ -48,10 +51,20 @@ public class HtmlContentRenderer {
 
     private String replaceCidImageSourcesWithInlineImages(String html, Email email) {
         if (html.contains("cid:")) {
-            var matcher = CID_PATTERN.matcher(html);
-            return matcher.replaceAll(mr -> replaceContentIdWithBase64DataWhenAvailable(mr, email));
+            return replaceAll(html, CID_PATTERN, mr -> replaceContentIdWithBase64DataWhenAvailable(mr, email)).toString();
         }
         return html;
+    }
+
+    private static StringBuffer replaceAll(String templateText, Pattern pattern,
+                                           Function<Matcher, String> replacer) {
+        Matcher matcher = pattern.matcher(templateText);
+        StringBuffer result = new StringBuffer();
+        while (matcher.find()) {
+            matcher.appendReplacement(result, replacer.apply(matcher));
+        }
+        matcher.appendTail(result);
+        return result;
     }
 
     private String harmonizeHtmlDocument(String html) {

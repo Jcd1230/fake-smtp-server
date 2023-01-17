@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.util;
+import lombok.var;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;

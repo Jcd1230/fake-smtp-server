@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.service;
+import lombok.var;
 
 import de.gessnerfl.fakesmtp.model.ContentType;
 import de.gessnerfl.fakesmtp.model.Email;

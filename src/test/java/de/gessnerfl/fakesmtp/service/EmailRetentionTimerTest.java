@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.service;
+import lombok.var;
 
 import de.gessnerfl.fakesmtp.config.FakeSmtpConfigurationProperties;
 import de.gessnerfl.fakesmtp.repository.EmailRepository;

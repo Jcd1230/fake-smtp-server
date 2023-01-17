@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.server.impl;
+import lombok.var;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;

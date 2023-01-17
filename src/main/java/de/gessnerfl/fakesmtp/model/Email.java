@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.model;
+import lombok.var;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

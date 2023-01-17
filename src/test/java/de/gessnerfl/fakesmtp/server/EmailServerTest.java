@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.server;
+import lombok.var;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

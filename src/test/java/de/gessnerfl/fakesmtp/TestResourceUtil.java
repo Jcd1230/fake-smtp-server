@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp;
+import lombok.var;
 
 import org.apache.commons.io.IOUtils;
 

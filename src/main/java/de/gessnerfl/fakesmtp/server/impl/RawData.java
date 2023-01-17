@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.server.impl;
+import lombok.var;
 
 import javax.mail.MessagingException;
 import javax.mail.Session;

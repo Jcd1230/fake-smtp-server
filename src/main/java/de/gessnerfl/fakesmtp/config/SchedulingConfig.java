@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.config;
+import lombok.var;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;

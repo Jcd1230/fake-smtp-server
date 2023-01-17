@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.server.impl;
+import lombok.var;
 
 import com.sun.mail.util.BASE64DecoderStream;
 import de.gessnerfl.fakesmtp.model.*;

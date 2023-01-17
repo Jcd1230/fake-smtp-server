@@ -1,4 +1,5 @@
 package de.gessnerfl.fakesmtp.controller;
+import lombok.var;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,6 +22,7 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -75,7 +77,7 @@ class EmailRestControllerMVCIntegrationTest {
         assertEquals(2, emailPage.getTotalPages());
         assertEquals(2, emailPage.getNumberOfElements());
         assertEquals(3, emailPage.getTotalElements());
-        assertEquals(List.of(email3, email2), emailPage.getContent());
+        assertEquals(Arrays.asList(email3, email2), emailPage.getContent());
     }
 
     @Test
@@ -93,7 +95,7 @@ class EmailRestControllerMVCIntegrationTest {
         assertEquals(2, emailPage.getTotalPages());
         assertEquals(1, emailPage.getNumberOfElements());
         assertEquals(3, emailPage.getTotalElements());
-        assertEquals(List.of(email1), emailPage.getContent());
+        assertEquals(Arrays.asList(email1), emailPage.getContent());
     }
 
     @Test
