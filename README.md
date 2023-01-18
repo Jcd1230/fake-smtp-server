@@ -4,6 +4,12 @@
 
 *Simple SMTP Server which stores all received emails in an in-memory database and renders the emails in a web interface*
 
+# To Build War for JBOSS:
+```
+gradle war
+```
+Output will be in `build/lib/`
+
 ## Introduction
 
 The Fake SMTP Server is a simple SMTP server which is designed for development purposes. The server collects all
